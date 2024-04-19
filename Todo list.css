@@ -1,0 +1,93 @@
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #f5f5f5;
+    height:100vh;
+    margin: 0;
+}
+
+#todo-container{
+    width: 600px; 
+    margin: 0 auto;
+    background-color: #3548c1;
+    padding: 20px;
+    border-radius: 25px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.2);
+    color: #ecf0f1;
+    text-align: center;
+}
+
+#todo-input{
+    width: 70%;
+    padding: 10px;
+    box-sizing: border-box;
+    margin-bottom: 10px;
+    border: none;
+    border-radius: 25px;
+    font-size: 16px;
+}
+
+ #todo-list{
+        list-style: none;
+        padding: 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+}
+
+.todo-item{
+    background-color: #34495e;
+    padding: 10px;
+    margin: 8px 0;
+    border-radius: 25px;
+    width: 70%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    animation: fadeIn 0.5s ease-in-out;
+}
+
+.todo-item span{ 
+    flex: 1;
+    margin-right: 10px;
+}
+
+.edit-btn,
+.delete-btn{
+    background-color: #e74c3c;
+    color: #fff;
+    border: none;
+    padding: 8px;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+.edit-btn{
+    background-color: #3498db;
+    margin-right: 5px;
+}
+
+@keyframes fadeIn {
+    from{
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to{
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.animate-out{
+    animation: fadeout 0.5s ease-out;
+}
+
+@keyframes fadeOut{
+    from{
+        opacity: 1;
+        transform: translateY(0);
+    }
+    to{
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+}
